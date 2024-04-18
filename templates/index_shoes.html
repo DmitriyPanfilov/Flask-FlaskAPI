@@ -1,0 +1,24 @@
+{% extends 'basestemp.html' %}
+
+
+    {% block Title %}
+    Обувь
+    {% endblock %}
+
+{% block body_content %}
+    <table>
+        <td>{{ name }}</td>
+        <td>{{ size }}</td>
+        <td>{{ amount }}</td>
+
+    {% for shoes in shoes_list %}
+        </tr>
+            <td>{{ shoes.name }}</td>
+            <td>{{ shoes.size }}</td>
+            <td>{{ shoes.amount }}</td>
+        </tr>
+    {% endfor %}
+
+    </table>
+
+{% endblock %}
